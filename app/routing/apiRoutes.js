@@ -6,7 +6,17 @@ module.exports = function (app) {
 
     });
 
-    app.get("/api/htmlRoutes", function (req, res) {
-        res.json();
+    app.get("/api/characters/:character", function (req, res) {
+        var chosen = req.params.character;
+
+        console.log(chosen);
+
+        for (var i = 0; i < characters.length; i++) {
+            if (chosen === characters[i].routeName) {
+                return res.json(characters[i]);
+            }
+        }
+
+        return res.json(false);
     });
-}
+};

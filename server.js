@@ -1,18 +1,15 @@
-// require expres
 var express = require("express");
 
-// cretes the server
-var app = ("exspress");
+var app = express();
 
-// sets port used to connect
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8083;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
 app.listen(PORT, function () {
-    console.log("App listening on PORT: " + PORT);
+    console.log("App listening on PORT: http://localhost:" + PORT);
 });
