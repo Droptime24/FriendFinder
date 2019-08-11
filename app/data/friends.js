@@ -1,9 +1,19 @@
 var friendsArray = [
     {
-        friendName: "James",
-        friendEmail: "james@hotmail.com",
-        friendID: "jluce18",
-        phoneNumber: "000-000-0000"
+        "name": "James",
+        "photo": "",
+        "scores": [
+            5,
+            1,
+            4,
+            4,
+            5,
+            1,
+            2,
+            5,
+            4,
+            1
+        ]
     }
 ];
 module.exports = friendsArray;
