@@ -8,46 +8,214 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/app/css/custom.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body class="bg-primary">
   <div class="jumbotron jumbotron" style="background-color:indigo"> >
-    <h1 class="display-4 text-center text-light">Friend <span class="text-primary">Match</span></h1>
+    <h1 class="display-4 text-center text-light">Friendship <span class="text-primary">Survey</span></h1>
     <hr class="my-4">
-    <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea tenetur est dolorum doloremque! Vero explicabo itaque
-      impedit quam dolores fugiat porro sequi earum vel, delectus necessitatibus voluptatem, eveniet reprehenderit
-      numquam!</p>
+    <p class="text-light text-center">The questions bellow are ranked on a 1-5 scale: <br> 1 being(Strongley Agree)
+      &amp; 5 (Strongly Disagree)
+      <ul>
+        <li></li>
+      </ul>
+    </p>
   </div>
 
   <div class="container">
 
-    <form class="mb-4">
-      <!-- name input start --> 
-      <div class="row mb-4">
-        <div class="col-6">
-          <h4>First Name</h4>
-          <input id="fName" type="text" class="form-control" placeholder="First name">
-        </div>   
-        
-        <div class="col-6">
-          <h4>Last Name</h4>
-          <input id="lName" type="text" class="form-control" placeholder="Last name">
-        </div>
-      </div>
-      <!-- name input start -->
+    <div class="card-body">
+      <form method="POST" role="form">
+        <!-- name input start -->
+        <div class="row mb-4">
+          <div class="col-6">
+            <h4>First Name</h4>
+            <input id="fName" type="text" class="form-control" placeholder="First name">
+          </div>
 
-      <!-- image upload start -->
-      <div class="row mb-4">
-        <div class="col">
-          
+          <div class="col-6">
+            <h4>Last Name</h4>
+            <input id="lName" type="text" class="form-control" placeholder="Last name">
+          </div>
         </div>
-      </div>
-      <!-- image upload end -->
+        <!-- name input start -->
 
-      <button type="submit" class="btn btn-dark">Submit</button>
-    </form>
+        <!-- q1-->
+        <div class="row mb-4">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="sports">
+                <h4>I enjoy sports</h4>
+              </label>
+              <select class="form-control" id="sports">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- q2 -->
+          <div class="col-6">
+            <label for="reading">
+              <h4>Reading is enjoyable</h4>
+            </label>
+            <select class="form-control" id="reading">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+
+
+        <!-- q3 -->
+        <div class="row mb-4">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="outdoors">
+                <h4>I love the outdoors</h4>
+              </label>
+              <select class="form-control" id="outdoors">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- q4 -->
+          <div class="col-6">
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">
+                <h4>I'd rather stay in than go out</h4>
+              </label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- q5 -->
+        <div class="row mb-4">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">
+                <h4>Video games are fun</h4>
+              </label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- q6 -->
+          <div class="col-6">
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">
+                <h4>Anime is awesome</h4>
+              </label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- q7 -->
+        <div class="row mb-4">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">
+                <h4>I enjoy social gatherings</h4>
+              </label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- q8 -->
+          <div class="col-6">
+            <div class="form-group">
+              <label for="music">
+                <h4> Music is enjoyable</h4>
+              </label>
+              <select class="form-control" id="music">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="row mb-4">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="workout">
+                <h4>Workingout is fun</h4>
+              </label>
+              <select class="form-control" id="workoug">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- q10 -->
+          <div class="col-6">
+            <div class="form-group">
+              <label for="unmobable">
+                <h4>Nothing can stand in my way</h4>
+              </label>
+              <select class="form-control" id="unmobable">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- image upload end -->
+
+        <button id="submit" type="submit" class="btn btn-dark">Submit</button>
+      </form>
+    </div>
   </div>
 
   <footer class="footer p-4 bg-dark">
@@ -56,11 +224,46 @@
       <a href="home" class="text-light">HOME</a> | <a href="survey" class="text-light">SURVEY</a>
     </div>
   </footer>
-  </div>
+
 
 
   <!-- container end -->
   <!-- Optional JavaScript -->
+  <script type="text/javascript">
+
+    $("#submit").on("click", function (event) {
+      event.preventDefault();
+
+      // Here we grab the form elements
+      var newResponse = {
+        firstName: $("#fName").val().trim(),
+        lastName: $("#lName").val().trim(),
+        photo: $("#photo").val().trim(),
+        score: $("#score").val().trim()
+      };
+
+      console.log(newResponse);
+      $.post("/api/tables", newReservation,
+        function (data) {
+
+          if (data) {
+            alert("Yay! You are officially booked!");
+          }
+
+          else {
+            alert("Sorry you are on the wait list");
+          }
+
+          $("#fName").val("");
+          $("#lName").val("");
+          $("#photo").val("");
+          $("#score").val("");
+
+        });
+
+    });
+  </script>
+
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
