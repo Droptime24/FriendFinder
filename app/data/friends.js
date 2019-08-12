@@ -1,7 +1,8 @@
+
 var friendsArray = [
     {
         "name": "James",
-        "photo": "",
+        "photo": "<img src='http://placeskull.com/300/300' alt=''/>",
         "scores": [
             5,
             1,
@@ -16,4 +17,7 @@ var friendsArray = [
         ]
     }
 ];
+
+    
+
 module.exports = friendsArray;

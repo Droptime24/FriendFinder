@@ -1,18 +1,17 @@
 module.exports = function (app) {
-
     
     app.get("/api/survey", function (req, res) {
-        res.json(friends);
+        res.json("friends");
 
     });
 
-    app.get("/api/names/:name", function (req, res) {
-        var friendName = req.params.character;
+    app.get("/api/friends/:name", function (req, res) {
+        var name = req.params.character;
 
-        console.log(friendName);
+        console.log(name);
 
         for (var i = 0; i < friendName.length; i++) {
-            if (friendName === names[i].routeName) {
+            if (name === names[i].routeName) {
                 return res.json(friendName[i]);
                 
             }
