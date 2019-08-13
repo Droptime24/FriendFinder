@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/app/css/custom.css">
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body class="bg-primary">
-  <div class="jumbotron jumbotron" style="background-color:indigo"> >
+  <div class="jumbotron jumbotron" style="background-color:indigo">
     <h1 class="display-4 text-center text-light">Friendship <span class="text-primary">Survey</span></h1>
     <hr class="my-4">
     <p class="text-light text-center">The questions bellow are ranked on a 1-5 scale: <br> 1 being(Strongley Agree)
@@ -29,6 +29,14 @@
 
     <div class="card-body">
       <form method="POST" role="form">
+
+        <div class="row mb-4">
+          <div class="col">
+            <h4>Add a Photo</h4>
+            <input type="file" name="photo" id="photo">
+          </div>
+        </div>
+
         <!-- name input start -->
         <div class="row mb-4">
           <div class="col-6">
@@ -42,15 +50,14 @@
           </div>
         </div>
         <!-- name input start -->
-
         <!-- q1-->
         <div class="row mb-4">
           <div class="col-6">
             <div class="form-group">
-              <label for="sports">
+              <label for="score">
                 <h4>I enjoy sports</h4>
               </label>
-              <select class="form-control" id="sports">
+              <select class="form-control" id="score" value="score">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -62,10 +69,10 @@
 
           <!-- q2 -->
           <div class="col-6">
-            <label for="reading">
+            <label for="score">
               <h4>Reading is enjoyable</h4>
             </label>
-            <select class="form-control" id="reading">
+            <select class="form-control" id="score" value="score">
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -80,10 +87,10 @@
         <div class="row mb-4">
           <div class="col-6">
             <div class="form-group">
-              <label for="outdoors">
+              <label for="score">
                 <h4>I love the outdoors</h4>
               </label>
-              <select class="form-control" id="outdoors">
+              <select class="form-control" id="score" value="score">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -96,10 +103,10 @@
           <!-- q4 -->
           <div class="col-6">
             <div class="form-group">
-              <label for="exampleFormControlSelect1">
+              <label for="score">
                 <h4>I'd rather stay in than go out</h4>
               </label>
-              <select class="form-control" id="exampleFormControlSelect1">
+              <select class="form-control" id="score1" value="score">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -114,10 +121,10 @@
         <div class="row mb-4">
           <div class="col-6">
             <div class="form-group">
-              <label for="exampleFormControlSelect1">
+              <label for="score">
                 <h4>Video games are fun</h4>
               </label>
-              <select class="form-control" id="exampleFormControlSelect1">
+              <select class="form-control" id="score" value="score">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -133,7 +140,7 @@
               <label for="exampleFormControlSelect1">
                 <h4>Anime is awesome</h4>
               </label>
-              <select class="form-control" id="exampleFormControlSelect1">
+              <select class="form-control" id="score" value="score">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -151,7 +158,7 @@
               <label for="exampleFormControlSelect1">
                 <h4>I enjoy social gatherings</h4>
               </label>
-              <select class="form-control" id="exampleFormControlSelect1">
+              <select class="form-control" id="score" value="score">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -164,10 +171,10 @@
           <!-- q8 -->
           <div class="col-6">
             <div class="form-group">
-              <label for="music">
+              <label for="score">
                 <h4> Music is enjoyable</h4>
               </label>
-              <select class="form-control" id="music">
+              <select class="form-control" id="score" value="score">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -182,10 +189,10 @@
         <div class="row mb-4">
           <div class="col-6">
             <div class="form-group">
-              <label for="workout">
+              <label for="score">
                 <h4>Workingout is fun</h4>
               </label>
-              <select class="form-control" id="workoug">
+              <select class="form-control" id="score" value="score">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -198,11 +205,11 @@
           <!-- q10 -->
           <div class="col-6">
             <div class="form-group">
-              <label for="unmobable">
+              <label for="score">
                 <h4>Nothing can stand in my way</h4>
               </label>
-              <select class="form-control" id="unmobable">
-                <option>1</option>
+              <select class="form-control" id="score" value="score">
+                <option value="1">1</option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
@@ -225,33 +232,34 @@
     </div>
   </footer>
 
-
-
   <!-- container end -->
   <!-- Optional JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script type="text/javascript">
 
     $("#submit").on("click", function (event) {
+      console.log("broken here")
       event.preventDefault();
 
       // Here we grab the form elements
-      var newResponse = {
+      var newFriend = {
         firstName: $("#fName").val().trim(),
         lastName: $("#lName").val().trim(),
         photo: $("#photo").val().trim(),
         score: $("#score").val().trim()
       };
 
-      console.log(newResponse);
-      $.post("/api/tables", newReservation,
+      console.log(newFriend);
+      $.post("/api/friends", newFriend,
         function (data) {
 
           if (data) {
-            alert("Yay! You are officially booked!");
+            alert("You have a new friend!");
           }
 
           else {
-            alert("Sorry you are on the wait list");
+            alert("Sorry you have 0 friends");
           }
 
           $("#fName").val("");
@@ -265,8 +273,7 @@
   </script>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>

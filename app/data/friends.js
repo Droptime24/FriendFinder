@@ -1,8 +1,9 @@
 
 var friendsArray = [
     {
-        "name": "James",
-        "avatar": "<img src='http://placeskull.com/300/300' alt=''/>",
+        "fName": "James",
+        "lName": "Luce",
+        "photo": "<img src='http://placeskull.com/300/300' alt=''/>",
         "scores": [
             5,
             1,
