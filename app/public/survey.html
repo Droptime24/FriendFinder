@@ -30,6 +30,11 @@
     <div class="card-body">
       <form method="POST" role="form">
         <!-- name input start -->
+          <div class="col-8">
+          <h4>Photo</h4>
+          <input id="photo" type="text" class="form-control" placeholder="Last name">
+          </div>
+          </div>
         <div class="row mb-4">
           <div class="col-6">
             <h4>First Name</h4>
@@ -42,7 +47,6 @@
           </div>
         </div>
         <!-- name input start -->
-
         <!-- q1-->
         <div class="row mb-4">
           <div class="col-6">
@@ -229,29 +233,32 @@
 
   <!-- container end -->
   <!-- Optional JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script type="text/javascript">
 
     $("#submit").on("click", function (event) {
+      console.log("broken here")
       event.preventDefault();
 
       // Here we grab the form elements
-      var newResponse = {
+      var newFriend = {
         firstName: $("#fName").val().trim(),
         lastName: $("#lName").val().trim(),
         photo: $("#photo").val().trim(),
         score: $("#score").val().trim()
       };
 
-      console.log(newResponse);
-      $.post("/api/tables", newReservation,
+      console.log(newFriend);
+      $.post("/api/friends", newFriend,
         function (data) {
 
           if (data) {
-            alert("Yay! You are officially booked!");
+            alert("You have a new friend!");
           }
 
           else {
-            alert("Sorry you are on the wait list");
+            alert("Sorry you have 0 friends");
           }
 
           $("#fName").val("");
@@ -265,8 +272,7 @@
   </script>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+ 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>

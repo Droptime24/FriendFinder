@@ -10,13 +10,10 @@ module.exports = function (app) {
 
     app.post("/api/friends", function (req, res) {
         //checking for table
+        console.log(req.body)
         if (friendsArray.length <= 5) {
             friendsArray.push(req.body);
             res.json(true);
-        }
-        else {
-            noFriends.push(req.body);
-            res.json(false);
         }
     });
 
