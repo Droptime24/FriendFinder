@@ -13,222 +13,271 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body class="bg-primary">
-  <div class="jumbotron jumbotron" style="background-color:indigo">
+<body class="bg-secondary">
+  <div class="jumbotron jumbotron" style="background-color:#000">
     <h1 class="display-4 text-center text-light">Friendship <span class="text-primary">Survey</span></h1>
     <hr class="my-4">
     <p class="text-light text-center">The questions bellow are ranked on a 1-5 scale: <br> 1 being(Strongley Agree)
       &amp; 5 (Strongly Disagree)
-      <ul>
-        <li></li>
-      </ul>
     </p>
   </div>
 
+  <br><br>
+
   <div class="container">
 
-    <div class="card-body">
-      <form method="POST" role="form">
 
-        <div class="row mb-4">
-          <div class="col">
-            <h4>Add a Photo</h4>
-            <input type="file" name="photo" id="photo">
-          </div>
-        </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Find Me a Friend</h3>
+      </div>
+      <div class="card-body">
+        <form method="POST" role="form" data-target="#matchedModalCenter">
 
-        <!-- name input start -->
-          <div class="col-8">
-          <h4>Photo</h4>
-          <input id="photo" type="text" class="form-control" placeholder="Last name">
-          </div>
-          </div>
-        <div class="row mb-4">
-          <div class="col-6">
-            <h4>First Name</h4>
-            <input id="fName" type="text" class="form-control" placeholder="First name">
+          <!-- form starts -->
+
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-group">
+                <h4>Name</h4>
+                <input id="name" type="text" class="form-control" placeholder="Full Name">
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="form-group">
+                <h4>Add a Photo</h4>
+                <input type="file" name="photo" id="photo" class="form-control">
+              </div>
+            </div>
           </div>
 
-          <div class="col-6">
-            <h4>Last Name</h4>
-            <input id="lName" type="text" class="form-control" placeholder="Last name">
-          </div>
-        </div>
-        <!-- name input start -->
-        <!-- q1-->
-        <div class="row mb-4">
-          <div class="col-6">
-            <div class="form-group">
-              <label for="score">
+          <!-- q1-->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-group">
+                <label for="questionOne">
                 <h4>I enjoy sports</h4>
-              </label>
-              <select class="form-control" id="score" value="score">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+                </label>
+                <select class="custom-select" id="questionOne">
+                  <option value="0"> - - - </option>
+                  <option value="5">Strongly Agree</option>
+                  <option value="4">Agree</option>
+                  <option value="3">Sometimes</option>
+                  <option value="2">Disagree</option>
+                  <option value="1">Strongly Disagree</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- q2 -->
+            <div class="col">
+              <div class="form-group">
+                <label for="questionTwo">
+                  <h4>Reading is enjoyable</h4>
+                </label>
+                <select class="form-control" id="questionTwo">
+                  <option value="0"> - - - </option>
+                  <option value=5>Strongly Agree</option>
+                  <option value="4">Agree</option>
+                  <option value="3">Sometimes</option>
+                  <option value="2">Disagree</option>
+                  <option value="1">Strongly Disagree</option>
+                </select>
+              </div>
             </div>
           </div>
 
-          <!-- q2 -->
-          <div class="col-6">
-            <label for="score">
-              <h4>Reading is enjoyable</h4>
-            </label>
-            <select class="form-control" id="score" value="score">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-        </div>
 
+          <!-- q3 -->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-group">
+                <label for="questionThree">
+                  <h4>I love the outdoors</h4>
+                </label>
+                <select class="form-control" id="questionThree">
+                  <option value="0"> - - - </option>
+                  <option value="5">Strongly Agree</option>
+                  <option value="4">Agree</option>
+                  <option value="3">Sometimes</option>
+                  <option value="2">Disagree</option>
+                  <option value="1">Strongly Disagree</option>
+                </select>
+              </div>
+            </div>
 
-        <!-- q3 -->
-        <div class="row mb-4">
-          <div class="col-6">
-            <div class="form-group">
-              <label for="score">
-                <h4>I love the outdoors</h4>
-              </label>
-              <select class="form-control" id="score" value="score">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+            <!-- q4 -->
+            <div class="col">
+              <div class="form-group">
+                <label for="questionFour">
+                  <h4>I'd rather stay in than go out</h4>
+                </label>
+                <select class="form-control" id="questionFour">
+                  <option value="0"> - - - </option>
+                  <option value="5">Strongly Agree</option>
+                  <option value="4">Agree</option>
+                  <option value="3">Sometimes</option>
+                  <option value="2">Disagree</option>
+                  <option value="1">Strongly Disagree</option>
+                </select>
+              </div>
             </div>
           </div>
 
-          <!-- q4 -->
-          <div class="col-6">
-            <div class="form-group">
-              <label for="score">
-                <h4>I'd rather stay in than go out</h4>
-              </label>
-              <select class="form-control" id="score1" value="score">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+          <!-- q5 -->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-group">
+                <label for="questionFive">
+                  <h4>Video games are fun</h4>
+                </label>
+                <select class="form-control" id="questionFive">
+                  <option value="0"> - - - </option>
+                  <option value="5">Strongly Agree</option>
+                  <option value="4">Agree</option>
+                  <option value="3">Sometimes</option>
+                  <option value="2">Disagree</option>
+                  <option value="1">Strongly Disagree</option>
+                </select>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- q5 -->
-        <div class="row mb-4">
-          <div class="col-6">
-            <div class="form-group">
-              <label for="score">
-                <h4>Video games are fun</h4>
-              </label>
-              <select class="form-control" id="score" value="score">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-          </div>
+            <!-- q6 -->
 
-          <!-- q6 -->
-          <div class="col-6">
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">
-                <h4>Anime is awesome</h4>
-              </label>
-              <select class="form-control" id="score" value="score">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <!-- q7 -->
-        <div class="row mb-4">
-          <div class="col-6">
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">
-                <h4>I enjoy social gatherings</h4>
-              </label>
-              <select class="form-control" id="score" value="score">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+            <div class="col">
+              <div class="form-group">
+                <label for="questionSix">
+                  <h4>Anime is awesome</h4>
+                </label>
+                <select class="form-control" id="questionSix">
+                  <option value="0"> - - - </option>
+                  <option value="5">Strongly Agree</option>
+                  <option value="4">Agree</option>
+                  <option value="3">Sometimes</option>
+                  <option value="2">Disagree</option>
+                  <option value="1">Strongly Disagree</option>
+                </select>
+              </div>
             </div>
           </div>
 
-          <!-- q8 -->
-          <div class="col-6">
-            <div class="form-group">
-              <label for="score">
-                <h4> Music is enjoyable</h4>
-              </label>
-              <select class="form-control" id="score" value="score">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+
+          <!-- q7 -->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-group">
+                <label for="questionSeven">
+                  <h4>I enjoy social gatherings</h4>
+                </label>
+                <select class="form-control" id="questionSeven">
+                  <option value="0"> - - - </option>
+                  <option value="5">Strongly Agree</option>
+                  <option value="4">Agree</option>
+                  <option value="3">Sometimes</option>
+                  <option value="2">Disagree</option>
+                  <option value="1">Strongly Disagree</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- q8 -->
+            <div class="col">
+              <div class="form-group">
+                <label for="questionEight">
+                  <h4> Music is enjoyable</h4>
+                </label>
+                <select class="form-control" id="questionEight">
+                  <option value="0"> - - - </option>
+                  <option value="5">Strongly Agree</option>
+                  <option value="4">Agree</option>
+                  <option value="3">Sometimes</option>
+                  <option value="2">Disagree</option>
+                  <option value="1">Strongly Disagree</option>
+                </select>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- 9 -->
-        <div class="row mb-4">
-          <div class="col-6">
-            <div class="form-group">
-              <label for="score">
-                <h4>Workingout is fun</h4>
-              </label>
-              <select class="form-control" id="score" value="score">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+          <!-- 9 -->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-group">
+                <label for="questionNine">
+                  <h4>Workingout is fun</h4>
+                </label>
+                <select class="form-control" id="questionNine">
+                  <option value="0"> - - - </option>
+                  <option value="5">Strongly Agree</option>
+                  <option value="4">Agree</option>
+                  <option value="3">Sometimes</option>
+                  <option value="2">Disagree</option>
+                  <option value="1">Strongly Disagree</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- q10 -->
+            <div class="col">
+              <div class="form-group">
+                <label for="questionTen">
+                  <h4>Nothing can stand in my way</h4>
+                </label>
+                <select class="form-control" id="questionTen">
+                  <option value="0"> - - - </option>
+                  <option value="5">Strongly Agree</option>
+                  <option value="4">Agree</option>
+                  <option value="3">Sometimes</option>
+                  <option value="2">Disagree</option>
+                  <option value="1">Strongly Disagree</option>
+                </select>
+              </div>
             </div>
           </div>
 
-          <!-- q10 -->
-          <div class="col-6">
-            <div class="form-group">
-              <label for="score">
-                <h4>Nothing can stand in my way</h4>
-              </label>
-              <select class="form-control" id="score" value="score">
-                <option value="1">1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <!-- image upload end -->
+          <!-- image upload end -->
 
-        <button id="submit" type="submit" class="btn btn-dark">Submit</button>
-      </form>
+          <button id="submit" type="submit" class="btn btn-dark" data-toggle="modal"
+            data-target="#matchedModalCenter">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
+
+
+  <!-- modal start-->
+  <div class="modal fade" id="matchedModalCenter" tabindex="-1" role="dialog" aria-labelledby="matchedModalCenterTitle">
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="matchedModalCenter">Friend Found</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="card">
+            <div class="card-header">
+            </div>
+            <div class="card-body">
+              <h2 id="name"></h2>
+              <div id="newFriend">
+                <h3><strong>Name:</strong><span id="name"></span></h3>
+                <h3><strong>Photo:</strong><span id="photo"></span></h3>
+                <h3><strong>Score:</strong><span id="score"></span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal end -->
 
   <footer class="footer p-4 bg-dark">
     <div class="container">
@@ -241,36 +290,50 @@
   <!-- Optional JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
   <script type="text/javascript">
 
     $("#submit").on("click", function (event) {
-      console.log("broken here")
       event.preventDefault();
 
-      // Here we grab the form elements
-      var newFriend = {
-        firstName: $("#fName").val().trim(),
-        lastName: $("#lName").val().trim(),
-        photo: $("#photo").val().trim(),
-        score: $("#score").val().trim()
-      };
+      var newScore = [
+        $("#questionOne").val(),
+        $("#questionTwo").val(),
+        $("#questionThree").val(),
+        $("#questionFour").val(),
+        $("#questionFive").val(),
+        $("#questionSix").val(),
+        $("#questionSeven").val(),
+        $("#questionEight").val(),
+        $("#questionNine").val(),
+        $("#questionTen").val()
 
-      console.log(newFriend);
+      ];
+        
+      console.log(newScore)
+
+      var newFriend = {
+        firstName: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        score: newScore
+      }
+
+
       $.post("/api/friends", newFriend,
         function (data) {
 
           if (data) {
-            alert("You have a new friend!");
+            console.log(data)
+            alert("You have a new friend!", score)
           }
 
           else {
-            alert("Sorry you have 0 friends");
+            alert("You have 0 friends");
           }
 
-          $("#fName").val("");
-          $("#lName").val("");
+          $("#name").val("");
           $("#photo").val("");
-          $("#score").val("");
+          $("#score").val();
 
         });
 
@@ -278,13 +341,13 @@
   </script>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
- 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
 
 </body>
 
