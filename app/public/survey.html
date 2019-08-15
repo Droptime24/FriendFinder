@@ -97,7 +97,6 @@
                   <h4>I love the outdoors</h4>
                 </label>
                 <select class="form-control" id="questionThree">
-                  <option value="0"> - - - </option>
                   <option value="5">Strongly Agree</option>
                   <option value="4">Agree</option>
                   <option value="3">Sometimes</option>
@@ -237,8 +236,7 @@
 
           <!-- image upload end -->
 
-          <button id="submit" type="submit" class="btn btn-dark" data-toggle="modal"
-            data-target="#matchedModalCenter">Submit</button>
+          <button id="submit" type="submit" class="btn btn-dark">Submit</button>
         </form>
       </div>
     </div>
@@ -263,8 +261,8 @@
             <div class="card-body">
               <h2 id="name"></h2>
               <div id="newFriend">
+                <h3><strong>Photo:</strong><img class="img-fluid" src="" alt="" id="photo"/></h3>
                 <h3><strong>Name:</strong><span id="name"></span></h3>
-                <h3><strong>Photo:</strong><span id="photo"></span></h3>
                 <h3><strong>Score:</strong><span id="score"></span></h3>
               </div>
             </div>
@@ -310,31 +308,20 @@
 
       ];
         
-      console.log(newScore)
 
       var newFriend = {
         firstName: $("#name").val().trim(),
         photo: $("#photo").val().trim(),
         score: newScore
       }
-
+      console.log(newFriend)
 
       $.post("/api/friends", newFriend,
         function (data) {
 
-          if (data) {
-            console.log(data)
-            alert("You have a new friend!", score)
-          }
-
-          else {
-            alert("You have 0 friends");
-          }
-
-          $("#name").val("");
-          $("#photo").val("");
-          $("#score").val();
-
+          $("#name").text(data.name);
+          $("#photo").attr("src", data.photo);
+          $("#matchedModalCenter").modal("toggle")
         });
 
     });
