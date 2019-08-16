@@ -8,44 +8,48 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="/app/css/custom.css">
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="/app/css/custom.css">
 </head>
 
-<body class="bg-secondary">
- <br>
+<body class="bg-light">
+  <!-- nav top -->
+  <nav class="nav navbar" style="background-color: black">
+    <li class="nav-item">
+      <a class="nav-link active text-secondary" href="#">Friend Finder</a>
+    </li>
+    <li class="nav-item">
+      <span class="badge badge-pill badge-primary">54 Friends Online</span>
+    </li>
+  </nav>
+
+<br>
+  <!-- top container -->
   <div class="container">
-    <div class="jumbotron jumbotron text-center" style="background-color:indigo">
+    <div class="jumbotron jumbotron text-center" style="background-color:black">
       <h1 class="display-3 text-light">Friend <span class="text-primary"> Finder</span></h1>
       <br>
-      <!-- <hr class="my-2 bg-light"> -->
-      <p class="lead">
+      <hr class="my-4 bg-light">
       <br>
-
-    </div>
-    <br>
-    <div class="jumbotron jumbotron text-center" style="background-color:steelblue">
-        <h2 class="text-dark">Make New Friends</h2>
-        <p class="text-dark">All without leaving your room</p>
-        <br>
-        
-        <a class="btn btn-outline-light text-light btn-lg" href="survey" role="button">Get Started</a>
-        </p>
+      <h2 class="text-light p-4">Make New Friends</h2>
+      <p class="text-secondary p-4">All without leaving your room</p>
       
-    </div>
-    </div>
 
+      <a class="btn btn-outline-light text-primary btn-lg" href="survey" role="button">Get Started</a>
+      </p>
+    </div>
   </div>
- 
-
+<br>
   <!-- footer -->
-  <footer class="footer p-4 bg-dark">
-    <div class="container">
+  <footer class="fixed-bottom" style="background-color: black; bottom: 0;">
+    <div class="container p-4">
+      <div class="text-center">
+        <a href="home" class="text-light">HOME</a> <span class="text-light">|</span> <a href="survey"
+          class="text-light">SURVEY</a>
+      </div>
 
-      <a href="home" class="text-light">HOME</a> | <a href="survey" class="text-light">SURVEY</a>
     </div>
   </footer>
   <!-- Optional JavaScript -->
