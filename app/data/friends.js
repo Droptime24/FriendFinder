@@ -1,8 +1,7 @@
 
 var friendsArray = [
     {
-        "fName": "David",
-        "lName": "Luce",
+        "name": "David",
         "photo": "<img src='http://placeskull.com/300/300' alt=''/>",
         "score": [
             5,
@@ -15,7 +14,7 @@ var friendsArray = [
             5,
             4,
             1
-        ]
+        ],
     },
     {
         "name": "Captian America",
@@ -31,7 +30,7 @@ var friendsArray = [
             2,
             4,
             1
-        ]
+        ],
     },
     {
         "name": "The Hulk",
@@ -47,7 +46,7 @@ var friendsArray = [
             1,
             4,
             3
-        ]
+        ],
     },
     {
         "name": "Iron Man",
@@ -63,7 +62,7 @@ var friendsArray = [
             5,
             4,
             1
-        ]
-    }
-];  
+        ],
+    },
+];
 module.exports = friendsArray;
