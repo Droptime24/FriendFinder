@@ -307,8 +307,8 @@
 
       $.post("/api/friends", friendData, function (data){ 
         
-          $("#name").text(friendData.name);
-          $("#photo").attr("src", frienData.photo);
+          $("#name").text(data.name);
+          $("#photo").attr("src", data.photo);
           $("#matchedModalCenter").modal("toggle");
         
       });
