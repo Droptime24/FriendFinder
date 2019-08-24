@@ -250,11 +250,11 @@
             <div class="card-header">
             </div>
             <div class="card-body">
-              <h2 id="name"></h2>
+              <!-- <h2 id="name"></h2> -->
               <div id="newFriend">
-                <h3><strong>Photo:</strong> <img class="img-fluid" src="" alt="" id="photo" /></h3>
-                <h3><strong>Name:</strong><span id="name"></span></h3>
-                <h3><strong>Score:</strong><span id="score"></span></h3>
+                <h3><strong>Photo:</strong> <img class="img-fluid" src="" alt="" id="matchedPhoto" /></h3>
+                <h3><strong>Name:</strong><span id="matchedName"></span></h3>
+                <h3><strong>Score:</strong><span id="matchedScore"></span></h3>
               </div>
             </div>
           </div>
@@ -306,10 +306,13 @@
       console.log(friendData)
 
       $.post("/api/friends", friendData, function (data){ 
-        
-          $("#name").text(data.name);
-          $("#score".text(data.newScore);
-          $("#photo").attr("src", data.photo);
+        console.log(data)
+        var name = $("#matchedName");
+        var score = $("#matchedScore");
+        var photo = $("#matchedPhoto");
+          name.text(data.name);
+          score.text(data.score);
+          photo.attr("src", data.photo);
           $("#matchedModalCenter").modal("toggle");
         
       });

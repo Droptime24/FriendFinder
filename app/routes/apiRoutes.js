@@ -43,7 +43,8 @@ module.exports = function (app) {
             }
         }
 
-        friendsArray.push(surveyData);
+        friendsArray.push(oldFriend);
         res.json(newFriend);
+        console.log ("Log: ", newFriend)
     });
 };

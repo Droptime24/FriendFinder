@@ -2,7 +2,7 @@
 var friendsArray = [
     {
         "name": "David",
-        "photo": "<img src='http://placeskull.com/300/300' alt=''/>",
+        "photo": "http://placeskull.com/50/50",
         "score": [
             5,
             1,
@@ -18,7 +18,7 @@ var friendsArray = [
     },
     {
         "name": "Captian America",
-        "photo": "<img src='http://placeskull.com/300/300' alt=''/>",
+        "photo": "http://placeskull.com/50/50",
         "score": [
             5,
             2,
@@ -34,7 +34,7 @@ var friendsArray = [
     },
     {
         "name": "The Hulk",
-        "photo": "<img src='http://placeskull.com/300/300' alt=''/>",
+        "photo": "http://placeskull.com/50/50",
         "score": [
             5,
             2,
@@ -50,7 +50,7 @@ var friendsArray = [
     },
     {
         "name": "Iron Man",
-        "photo": "<img src='http://placeskull.com/300/300' alt=''/>",
+        "photo": "http://placeskull.com/50/50",
         "score": [
             5,
             2,
